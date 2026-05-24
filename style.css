@@ -114,3 +114,5 @@ body { background:var(--bg); color:#fff; font-family:var(--font-b); overflow-x:h
     .gallery-item, .gallery-card-item:nth-child(2) .gallery-item, .gallery-card-item:nth-child(3) .gallery-item { height:320px; border-radius:20px; }
     .chat-window { width:280px; right:-10px; height:380px; }
 }
+
+
