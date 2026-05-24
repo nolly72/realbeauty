@@ -4,51 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SENS. | Салон красоты</title>
-    <!-- Исправленная ссылка на иконки -->
+    <!-- Подключаем жирные и плавные шрифты + иконки -->
+    <link rel="stylesheet" href="https://googleapis.com">
     <link rel="stylesheet" href="https://cloudflare.com">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Размытые неоновые круги на фоне для эстетики -->
+    <div class="bg-glow-container">
+        <div class="glow-circle circle-pink"></div>
+        <div class="glow-circle circle-yellow"></div>
+    </div>
+
+    <!-- Навигация -->
     <header class="navbar">
         <div class="logo">SENS<span>.</span></div>
-        <nav class="nav-links"><a href="#services">Услуги</a><a href="#gallery">Галерея</a></nav>
-        <button class="btn open-booking-btn">Записаться</button>
+        <nav class="nav-links">
+            <a href="#services">Услуги</a>
+            <a href="#gallery">Галерея</a>
+        </nav>
+        <button class="btn open-booking-btn pulse-btn">Записаться</button>
     </header>
 
+    <!-- Главный экран -->
     <section class="hero-section">
         <div class="hero-content">
-            <span class="hero-badge">NEW ERA OF BEAUTY</span>
-            <h1 class="hero-title">Твой стиль.<br>Твоя эстетика.</h1>
-            <p class="hero-description">Современный концепт-салон. Создаем тренды и ценим твой комфорт.</p>
+            <span class="hero-badge">⚡ NEW ERA OF BEAUTY</span>
+            <!-- Огромный, жирный и плавный заголовок -->
+            <h1 class="hero-title animate-text">Твой стиль.<br><span class="gradient-text">Твоя эстетика.</span></h1>
+            <p class="hero-description">Современный концепт-салон. Создаем дерзкие тренды и ценим твой абсолютный комфорт.</p>
             <button class="btn btn-main open-booking-btn">Выбрать слот</button>
         </div>
         <div class="hero-img-box">
-            <!-- ТУТ ГЛАВНОЕ ФОТО ИНТЕРЬЕРА -->
             <img src="img/hero.jpg" alt="Главное фото">
+            <div class="img-overlay-glow"></div>
         </div>
     </section>
 
+    <!-- Блок направлений -->
     <section id="services" class="services-section">
         <h2 class="section-title">Направления</h2>
         <div class="services-grid">
             <div class="service-card">
-                <!-- ТУТ ФОТО ДЛЯ ВОЛОС -->
-                <img src="img/hair.jpg" alt="Волосы">
-                <div class="card-info"><h3>Hair Design</h3><span class="price">от 2 500 ₽</span></div>
+                <div class="card-img-wrapper">
+                    <img src="img/hair.jpg" alt="Волосы">
+                </div>
+                <div class="card-info">
+                    <h3>Hair Design</h3>
+                    <span class="price">от 2 500 ₽</span>
+                </div>
             </div>
             <div class="service-card">
-                <!-- ТУТ ФОТО ДЛЯ НОГТЕЙ -->
-                <img src="img/nails.jpg" alt="Ногти">
-                <div class="card-info"><h3>Nails & Art</h3><span class="price">от 1 900 ₽</span></div>
+                <div class="card-img-wrapper">
+                    <img src="img/nails.jpg" alt="Ногти">
+                </div>
+                <div class="card-info">
+                    <h3>Nails & Art</h3>
+                    <span class="price">от 1 900 ₽</span>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Эстетичная сложенная галерея (Лукбук) -->
     <section id="gallery" class="gallery-section">
         <h2 class="section-title">Лукбук</h2>
+        <!-- Сетка теперь выстроена идеально ровно и на ПК, и на смартфонах -->
         <div class="gallery-grid">
-            <!-- ТУТ 4 ФОТО ДЛЯ ГАЛЕРЕИ -->
             <div class="gallery-item"><img src="img/look1.jpg" alt="Фото 1"></div>
             <div class="gallery-item"><img src="img/look2.jpg" alt="Фото 2"></div>
             <div class="gallery-item"><img src="img/look3.jpg" alt="Фото 3"></div>
@@ -56,10 +79,11 @@
         </div>
     </section>
 
+    <!-- Модальное окно записи -->
     <div id="booking-modal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h2>Online-запись</h2>
+            <h2>Онлайн-запись</h2>
             <form id="booking-form">
                 <div class="form-group"><input type="text" id="user-name" required placeholder="Твое имя"></div>
                 <div class="form-group"><input type="tel" id="user-phone" required placeholder="Телефон"></div>
@@ -68,11 +92,19 @@
         </div>
     </div>
 
+    <!-- Ассистент -->
     <div class="assistant-wrapper">
-        <button id="assistant-btn" class="assistant-toggle"><i class="fa-solid fa-sparkles"></i></button>
+        <button id="assistant-btn" class="assistant-toggle">
+            <i class="fa-solid fa-sparkles"></i>
+        </button>
         <div id="assistant-chat" class="chat-window hidden">
-            <div class="chat-header"><h4>Алекс • AI</h4><button id="close-chat">&times;</button></div>
-            <div class="chat-body" id="chat-body"><div class="message bot">Привет! Найти свободное окошко? ✨</div></div>
+            <div class="chat-header">
+                <h4>Алекс • AI</h4>
+                <button id="close-chat">&times;</button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="message bot">Привет! Помочь найти свободное окошко? ✨</div>
+            </div>
             <div class="chat-footer">
                 <input type="text" id="chat-input" placeholder="Напиши мне...">
                 <button id="send-chat-btn"><i class="fa-solid fa-paper-plane"></i></button>
