@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENS. | Салон красоты</title>
+    <title>SENS. | Пространство эстетики и стиля</title>
     <!-- Подключаем жирные и плавные шрифты + иконки -->
     <link rel="stylesheet" href="https://googleapis.com">
     <link rel="stylesheet" href="https://cloudflare.com">
@@ -21,6 +21,7 @@
     <header class="navbar">
         <div class="logo">SENS<span>.</span></div>
         <nav class="nav-links">
+            <a href="#about">О нас</a>
             <a href="#services">Услуги</a>
             <a href="#gallery">Галерея</a>
         </nav>
@@ -28,12 +29,18 @@
     </header>
 
     <!-- Главный экран -->
-    <section class="hero-section">
+    <section class="hero-section" id="about">
         <div class="hero-content">
             <span class="hero-badge">⚡ NEW ERA OF BEAUTY</span>
-            <!-- Огромный, жирный и плавный заголовок -->
             <h1 class="hero-title animate-text">Твой стиль.<br><span class="gradient-text">Твоя эстетика.</span></h1>
-            <p class="hero-description">Современный концепт-салон. Создаем дерзкие тренды и ценим твой абсолютный комфорт.</p>
+            <p class="hero-description">
+                SENS. — это больше, чем концепт-салон. Это комьюнити людей, которые выбирают качество, индивидуальность и безупречный сервис. Мы отказались от пафоса, чтобы создать место, где ты можешь по-настоящему расслабиться под правильный плейлист, выпить идеальный матча-латте и доверить свой образ профессионалам.
+            </p>
+            <div class="hero-features">
+                <div class="h-feature"><span>✓</span> Топ-мастера индустрии</div>
+                <div class="h-feature"><span>✓</span> Материалы премиум-сегмента</div>
+                <div class="h-feature"><span>✓</span> Атмосфера полного релакса</div>
+            </div>
             <button class="btn btn-main open-booking-btn">Выбрать слот</button>
         </div>
         <div class="hero-img-box">
@@ -51,7 +58,10 @@
                     <img src="img/hair.jpg" alt="Волосы">
                 </div>
                 <div class="card-info">
-                    <h3>Hair Design</h3>
+                    <div>
+                        <h3>Hair Design</h3>
+                        <p class="card-text">Стрижки, которые идеально держат форму без укладки. Сложные и умные окрашивания, сохраняющие здоровье волос.</p>
+                    </div>
                     <span class="price">от 2 500 ₽</span>
                 </div>
             </div>
@@ -60,22 +70,57 @@
                     <img src="img/nails.jpg" alt="Ногти">
                 </div>
                 <div class="card-info">
-                    <h3>Nails & Art</h3>
+                    <div>
+                        <h3>Nails & Art</h3>
+                        <p class="card-text">Безупречный аппаратный уход, идеальные блики и концептуальный минималистичный дизайн ногтей.</p>
+                    </div>
                     <span class="price">от 1 900 ₽</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Эстетичная сложенная галерея (Лукбук) -->
+    <!-- Эстетичная галерея (Лукбук) с текстами под каждой фотографией -->
     <section id="gallery" class="gallery-section">
-        <h2 class="section-title">Лукбук</h2>
-        <!-- Сетка теперь выстроена идеально ровно и на ПК, и на смартфонах -->
+        <h2 class="section-title">Лукбук & Пространство</h2>
         <div class="gallery-grid">
-            <div class="gallery-item"><img src="img/look1.jpg" alt="Фото 1"></div>
-            <div class="gallery-item"><img src="img/look2.jpg" alt="Фото 2"></div>
-            <div class="gallery-item"><img src="img/look3.jpg" alt="Фото 3"></div>
-            <div class="gallery-item"><img src="img/look4.jpg" alt="Фото 4"></div>
+            
+            <!-- Фото 1 -->
+            <div class="gallery-card-item">
+                <div class="gallery-item"><img src="img/look1.jpg" alt="Зона мойки"></div>
+                <div class="gallery-text-block">
+                    <h4>Зона ухода и релакса</h4>
+                    <p>Анатомические кресла и мягкий приглушенный свет. Здесь мы делаем уходовые спа-ритуалы для волос, пока ты засыпаешь под расслабляющий эмбиент.</p>
+                </div>
+            </div>
+
+            <!-- Фото 2 -->
+            <div class="gallery-card-item">
+                <div class="gallery-item"><img src="img/look2.jpg" alt="Интерьер"></div>
+                <div class="gallery-text-block">
+                    <h4>Концептуальный дизайн</h4>
+                    <p>Каждая деталь нашего интерьера создана для твоего визуального удовольствия. Природные текстуры, мягкие изгибы и идеальный свет для твоих селфи.</p>
+                </div>
+            </div>
+
+            <!-- Фото 3 -->
+            <div class="gallery-card-item">
+                <div class="gallery-item"><img src="img/look3.jpg" alt="Детали"></div>
+                <div class="gallery-text-block">
+                    <h4>Эстетика в мелочах</h4>
+                    <p>Мы верим, что комфорт складывается из деталей. Свежие журналы, аромат селективного парфюма в воздухе и забота, которую ты чувствуешь с первой секунды.</p>
+                </div>
+            </div>
+
+            <!-- Фото 4 -->
+            <div class="gallery-card-item">
+                <div class="gallery-item"><img src="img/look4.jpg" alt="Кабинет"></div>
+                <div class="gallery-text-block">
+                    <h4>Камерная атмосфера</h4>
+                    <p>Отдельные уединенные зоны для процедур, где можно побыть наедине со своими мыслями, поработать за ноутбуком или просто выпить бокал игристого.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
