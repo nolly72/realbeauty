@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON & CHIC | Современный Салон Красоты</title>
+    <!-- Подключаем иконки -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- Наш файл стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="navbar">
+        <div class="logo">⚡ NEON&CHIC</div>
+        <nav class="nav-links">
+            <a href="#services">Услуги</a>
+            <a href="#gallery">Атмосфера</a>
+            <a href="#team">Мастера</a>
+        </nav>
+        <button class="btn btn-primary open-booking-btn">Записаться</button>
+    </header>
+
+    <!-- Главный баннер (Hero) -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="badge">Твой стиль. Твои правила.</span>
+            <h1>Красота без <br><span class="highlight">лишнего пафоса</span></h1>
+            <p>Создаем яркие образы, ценим твое время и качаем тренды. Залетай на стрижку, маникюр или полный апгрейд.</p>
+            <div class="hero-actions">
+                <button class="btn btn-main open-booking-btn">Выбрать время</button>
+                <a href="#services" class="btn btn-secondary">Смотреть прайс</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Здесь будет яркое современное фото -->
+            <div class="image-placeholder"></div>
+        </div>
+    </section>
+
+    <!-- Блок услуг -->
+    <section id="services" class="services-section">
+        <h2 class="section-title">Что мы делаем хорошо</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon"><i class="fa-solid fa-scissors"></i></div>
+                <h3>Стрижки & Окрашивание</h3>
+                <p>От ровного среза до сумасшедшего неона.</p>
+                <span class="price">от 2 000 ₽</span>
+            </div>
+            <div class="service-card">
+                <div class="icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+                <h3>Маникюр & Педикюр</h3>
+                <p>Чистый аппаратный уход и стойкое покрытие.</p>
+                <span class="price">от 1 800 ₽</span>
+            </div>
+            <div class="service-card">
+                <div class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <h3>Брови & Мейкап</h3>
+                <p>Ламинирование, архитектура и вечерний образ.</p>
+                <span class="price">от 1 500 ₽</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно онлайн-записи -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Онлайн-запись</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="user-name">Имя</label>
+                    <input type="text" id="user-name" required placeholder="Как тебя зовут?">
+                </div>
+                <div class="form-group">
+                    <label for="user-phone">Телефон</label>
+                    <input type="tel" id="user-phone" required placeholder="+7 (999) 000-00-00">
+                </div>
+                <div class="form-group">
+                    <label for="service-select">Услуга</label>
+                    <select id="service-select">
+                        <option value="hair">Волосы</option>
+                        <option value="nails">Ногти</option>
+                        <option value="brows">Брови & Визаж</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-submit">Подтвердить запись</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Кнопка и виджет Ассистента -->
+    <div class="assistant-wrapper">
+        <button id="assistant-btn" class="assistant-toggle">
+            <i class="fa-solid fa-comment-dots"></i>
+            <span class="pulse"></span>
+        </button>
+        
+        <div id="assistant-chat" class="chat-window hidden">
+            <div class="chat-header">
+                <h3>Твой Ассистент Алекс</h3>
+                <button id="close-chat">&times;</button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="message bot">Привет! 👋 Я твой умный помощник. Помочь выбрать мастера или рассказать про акции?</div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="chat-input" placeholder="Напиши мне...">
+                <button id="send-chat-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключаем скрипты -->
+    <script src="script.js"></script>
+</body>
+</html>
